@@ -17,8 +17,7 @@
   // 4. Hitung Saldo Akhir
   $saldo_akhir = $kas_masuk - $kas_keluar;
 
-  // 5. Ambil Daftar Murid yang BELUM BAYAR (Contoh logika: murid yang tidak ada di tabel transaksi bulan ini)
-  // Untuk sementara kita ambil semua murid yang statusnya 'aktif'
+  // 5. Ambil Daftar Murid yang BELUM BAYAR
   $daftar_tunggu = mysqli_query($conn, "SELECT * FROM murid WHERE status='aktif' LIMIT 5");
 
   $title = "Dashboard"; 

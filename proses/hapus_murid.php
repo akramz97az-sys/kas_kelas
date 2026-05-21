@@ -7,8 +7,7 @@ include_once $root . "/config/app.php";
 if (isset($_GET['id'])) {
     $id = mysqli_real_escape_string($conn, $_GET['id']);
 
-    // Query Hapus
-    $query = "DELETE FROM murid WHERE id_murid = '$id'";
+$query = "UPDATE murid SET status = 'non-aktif' WHERE id_murid = '$id'";
 
     if (mysqli_query($conn, $query)) {
         // Berhasil, balik ke halaman data murid

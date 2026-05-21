@@ -175,7 +175,9 @@ $subtitle = "Kas Kelas";
 
                 <div class="space-y-1">
                     <label class="text-[10px] font-black text-slate-400 uppercase ml-1">NISN</label>
-                    <input type="text" name="nisn" id="edit_nisn" required class="w-full px-6 py-4 rounded-2xl bg-slate-50 outline-none font-bold">
+                    <input type="text" name="nisn" required placeholder="001234..." 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    class="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-transparent focus:border-emerald-500 focus:bg-white outline-none transition-all font-bold text-slate-700">
                 </div>
 
                 <div class="space-y-1">
